@@ -7,6 +7,13 @@
       "permissions": {
         "setting": "open"
       }
+    },
+    "/currenttime": {
+      "name": "/currenttime",
+      "lambdaFunction": "lambdaLocaltime",
+      "permissions": {
+        "setting": "open"
+      }
     }
   }
 }

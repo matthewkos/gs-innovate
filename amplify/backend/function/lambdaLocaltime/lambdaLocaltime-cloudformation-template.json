@@ -47,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "lambdaHealthcheck",
+            "lambdaLocaltime",
             {
               "Fn::Join": [
                 "",
                 [
-                  "lambdaHealthcheck",
+                  "lambdaLocaltime",
                   "-",
                   {
                     "Ref": "env"
@@ -89,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "gsinnovate01LambdaRole78ed22e2",
+            "gsinnovate01LambdaRolecab8bb90",
             {
               "Fn::Join": [
                 "",
                 [
-                  "gsinnovate01LambdaRole78ed22e2",
+                  "gsinnovate01LambdaRolecab8bb90",
                   "-",
                   {
                     "Ref": "env"

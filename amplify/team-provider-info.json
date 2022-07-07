@@ -14,7 +14,13 @@
     "categories": {
       "function": {
         "lambdaHealthcheck": {
-          "proj": "gsinnovate"
+          "proj": "gsinnovate",
+          "deploymentBucketName": "amplify-gsinnovate01-staging-24003-deployment",
+          "s3Key": "amplify-builds/lambdaHealthcheck-4f57725a654144546162-build.zip"
+        },
+        "lambdaLocaltime": {
+          "deploymentBucketName": "amplify-gsinnovate01-staging-24003-deployment",
+          "s3Key": "amplify-builds/lambdaLocaltime-634f594731634c614763-build.zip"
         }
       }
     }

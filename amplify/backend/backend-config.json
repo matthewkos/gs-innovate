@@ -3,18 +3,30 @@
     "lambdaHealthcheck": {
       "build": true,
       "providerPlugin": "awscloudformation",
-      "service": "Lambda",
-      "dependsOn": []
+      "service": "Lambda"
+    },
+    "lambdaLocaltime": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   },
   "api": {
-    "api001": {
+    "apiHealthCheck": {
       "service": "API Gateway",
       "providerPlugin": "awscloudformation",
       "dependsOn": [
         {
           "category": "function",
           "resourceName": "lambdaHealthcheck",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        },
+        {
+          "category": "function",
+          "resourceName": "lambdaLocaltime",
           "attributes": [
             "Name",
             "Arn"
