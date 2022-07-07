@@ -32,10 +32,12 @@ const { TabPane } = Tabs;
 
 const ForumPost = (image: string, title: string, body: string, likes: number, comments: number, postdate: number, bordered: boolean) => {
     return (
-        <ProCard colSpan='100%' bordered={bordered} >
-            <Avatar></Avatar>
-            <div>
-                {title}
+        <ProCard colSpan='100%' bordered={bordered}>
+            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center'}}>
+                <Avatar></Avatar>
+                <div style={{marginLeft: 10}}>
+                    {title}
+                </div>
             </div>
             <div>
                 {body}
@@ -127,11 +129,11 @@ const MainPage: React.FC = () => {
                             </div>
                             <PageHeader
                                 footer={
-                                <Tabs defaultActiveKey="1">
-                                    <TabPane tab="All Posts" key="1" />
-                                    <TabPane tab="Subscribed Posts" key="2" />
-                                </Tabs>
-                            }>
+                                    <Tabs defaultActiveKey="1">
+                                        <TabPane tab="All Posts" key="1" />
+                                        <TabPane tab="Subscribed Posts" key="2" />
+                                    </Tabs>
+                                }>
                             </PageHeader>
                         </ProCard>
                         <ProCard gutter={[8, 8]} ghost style={{ height: '100%' }}>
