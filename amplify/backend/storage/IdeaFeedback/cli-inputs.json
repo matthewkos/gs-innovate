@@ -1,0 +1,10 @@
+{
+  "resourceName": "IdeaFeedback",
+  "tableName": "IdeaFeedback",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
