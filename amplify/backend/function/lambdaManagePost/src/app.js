@@ -171,6 +171,9 @@ app.post(path, function(req, res) {
     req.body['userId'] = req.apiGateway.event.requestContext.identity.cognitoIdentityId || UNAUTH;
   }
 
+  const id = `${Date.now()}`;
+  req.body['id'] = id;
+
   let putItemParams = {
     TableName: tableName,
     Item: req.body
