@@ -1,7 +1,7 @@
 import * as React from "react";
 import { FormOutlined , ProfileOutlined , UserOutlined, AppstoreOutlined, QuestionCircleOutlined, BellOutlined } from '@ant-design/icons' ;
 import {PageContainer, ProCard, ProLayout} from '@ant-design/pro-components' ;
-import {Avatar, Badge, Button, Input, PageHeader, Result, Tabs, Tag} from 'antd' ;
+import {Avatar, Badge, Button, Input, PageHeader, Result, Select, Tabs, Tag} from 'antd' ;
 import { useState } from 'react' ;
 import {Icon} from "@ant-design/compatible";
 
@@ -30,6 +30,25 @@ const defaultProps = {
 
 const { TabPane } = Tabs;
 
+const ForumPost = (image: string, title: string, body: string, likes: number, comments: number, postdate: number, bordered: boolean) => {
+    return (
+        <ProCard colSpan='100%' bordered={bordered} >
+            <Avatar></Avatar>
+            <div>
+                {title}
+            </div>
+            <div>
+                {body}
+            </div>
+            <div>
+                {likes} Likes | {comments} Comments
+            </div>
+            <div>
+                {postdate} days ago
+            </div>
+        </ProCard>
+    );
+}
 
 const MainPage: React.FC = () => {
     const [ pathname , setPathname ] = useState ( '/welcome' ) ;
@@ -115,10 +134,29 @@ const MainPage: React.FC = () => {
                             }>
                             </PageHeader>
                         </ProCard>
-                        <ProCard gutter={16} ghost style={{ height: '100%' }}>
-                            <ProCard colSpan={16} style={{ height: 600 }}>
+                        <ProCard gutter={[8, 8]} ghost style={{ height: '100%' }}>
+                            <ProCard gutter={[8, 8]}  colSpan='70%' ghost wrap split='horizontal'>
+                                <ProCard  style={{ height: 200 }}>
+                                    <div>Filters:</div>
+                                    <div>#options</div>
+                                    <div>Other Options: </div>
+                                    <div>Author:
+                                        <Select size='middle' placeholder='Unlimited'></Select>
+                                        Ratings:
+                                        <Select size='middle' placeholder='Unlimited'></Select>
+                                    </div>
+                                </ProCard>
+                                <ProCard style={{ height: 600 }} split='horizontal'>
+                                    {ForumPost('1', 'Centralised Documentation Platform', 'Justina Wong is a nice person', 2, 1, 69,true)}
+                                    {ForumPost('1', 'Centralised Documentation Platform', 'Justina Wong is a very helpful', 2, 1, 69,false)}
+                                    {ForumPost('1', 'Centralised Documentation Platform', 'Justina Wong is not a bully', 2, 1, 69,true)}
+                                </ProCard>
                             </ProCard>
-                            <ProCard colSpan={8} style={{ height: '100%' }}/>
+                            <ProCard gutter={[8, 8]} ghost wrap split='horizontal'>
+                                <Button style={{height: 80, width: '100%'}} type='primary'>Create Post</Button>
+                                <ProCard colSpan='100%' style={{ height: 300 }} title='Trending Topics' headerBordered/>
+                                <ProCard colSpan='100%' style={{ height: 200 }} title='Subscribed Topics' headerBordered/>
+                            </ProCard>
                         </ProCard>
                     </ProCard>
                     {/*<div*/}
