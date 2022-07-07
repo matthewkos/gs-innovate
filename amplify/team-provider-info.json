@@ -20,6 +20,10 @@
         "lambdanewitemintesttabl001": {
           "deploymentBucketName": "amplify-gsinnovate01-staging-24003-deployment",
           "s3Key": "amplify-builds/lambdanewitemintesttabl001-6e6f59634a6e37394172-build.zip"
+        },
+        "lambdaAddPost": {
+          "deploymentBucketName": "amplify-gsinnovate01-staging-24003-deployment",
+          "s3Key": "amplify-builds/lambdaAddPost-4a4241534a34726d7043-build.zip"
         }
       }
     }

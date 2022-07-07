@@ -23,6 +23,25 @@
           }
         }
       ]
+    },
+    "lambdaAddPost": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "storage",
+          "resourceName": "gsinnovateDynamo",
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "attributeEnvMap": {
+            "Name": "TABLE_NAME",
+            "Arn": "TABLE_ARN"
+          }
+        }
+      ]
     }
   },
   "api": {
@@ -45,12 +64,40 @@
             "Name",
             "Arn"
           ]
+        },
+        {
+          "category": "function",
+          "resourceName": "lambdaAddPost",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
         }
       ]
     }
   },
   "storage": {
     "gsinnovateDynamo": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    },
+    "User": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    },
+    "IdeaFeedback": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    },
+    "Post": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    },
+    "Comments": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    },
+    "Idea": {
       "service": "DynamoDB",
       "providerPlugin": "awscloudformation"
     }

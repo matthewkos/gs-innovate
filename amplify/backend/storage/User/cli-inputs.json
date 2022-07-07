@@ -1,0 +1,14 @@
+{
+  "resourceName": "User",
+  "tableName": "User",
+  "partitionKey": {
+    "fieldName": "gsId",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "name",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

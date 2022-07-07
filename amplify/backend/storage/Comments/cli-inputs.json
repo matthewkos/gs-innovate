@@ -1,0 +1,14 @@
+{
+  "resourceName": "Comments",
+  "tableName": "Comments",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "postId",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
