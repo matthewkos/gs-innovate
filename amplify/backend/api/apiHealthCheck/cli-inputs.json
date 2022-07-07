@@ -15,9 +15,37 @@
         "setting": "open"
       }
     },
-    "/addPost": {
-      "name": "/addPost",
-      "lambdaFunction": "lambdaAddPost",
+    "/idea": {
+      "name": "/idea",
+      "lambdaFunction": "lambdaAddIdea",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/user": {
+      "name": "/user",
+      "lambdaFunction": "lambdaManageUser",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/feedback": {
+      "name": "/feedback",
+      "lambdaFunction": "lambdaManageFeedback",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/comment": {
+      "name": "/comment",
+      "lambdaFunction": "lambdaManageComment",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/post": {
+      "name": "/post",
+      "lambdaFunction": "lambdaManagePost",
       "permissions": {
         "setting": "open"
       }
