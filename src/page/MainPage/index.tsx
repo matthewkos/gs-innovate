@@ -1,37 +1,42 @@
 import * as React from "react";
-import { CrownOutlined , SmileOutlined , UserOutlined } from '@ant-design/icons' ;
-import { PageContainer , ProLayout } from '@ant-design/pro-components' ;
-import { Avatar , Button , Input , Result , Tag } from 'antd' ;
+import { FormOutlined , ProfileOutlined , UserOutlined, AppstoreOutlined, QuestionCircleOutlined, BellOutlined } from '@ant-design/icons' ;
+import {PageContainer, ProCard, ProLayout} from '@ant-design/pro-components' ;
+import {Avatar, Badge, Button, Input, PageHeader, Result, Tabs, Tag} from 'antd' ;
 import { useState } from 'react' ;
+import {Icon} from "@ant-design/compatible";
 
 const defaultProps = {
     routes : [
         {
             path : '/welcome' ,
-            name : 'Welcome' ,
-            icon : < CrownOutlined /> ,
+            name : 'GS Innovate' ,
+            icon : <FormOutlined /> ,
             component : './Welcome' ,
         } ,
         {
             path : '/admin/sub-page2' ,
-            name : 'Secondary page' ,
-            icon : < UserOutlined /> ,
+            name : 'Past Projects' ,
+            icon : <AppstoreOutlined /> ,
             component : './Welcome' ,
         } ,
         {
             path : '/admin/sub-page3' ,
-            name : 'third-level page' ,
-            icon : < SmileOutlined /> ,
+            name : 'Profile' ,
+            icon : <ProfileOutlined />,
             component : './Welcome' ,
         } ,
     ] ,
 };
+
+const { TabPane } = Tabs;
+
 
 const MainPage: React.FC = () => {
     const [ pathname , setPathname ] = useState ( '/welcome' ) ;
     return (
         <div>
             < ProLayout
+                navTheme='light'
                 route = { defaultProps }
                 location = { {
                     pathname ,
@@ -51,6 +56,7 @@ const MainPage: React.FC = () => {
                 rightContentRender = { ( ) => (
                     < div >
                         < Avatar shape = "square" size = "small" icon = { < UserOutlined /> } />
+                        <p>Hello</p>
                     </ div >
                 ) }
             >
@@ -59,6 +65,7 @@ const MainPage: React.FC = () => {
                     tags={<Tag color="blue">状态一</Tag>}
                     header={{
                         style: {
+                            // backgroundColor: '#001529',
                             padding: '4px 16px',
                             position: 'fixed',
                             top: 0,
@@ -66,40 +73,71 @@ const MainPage: React.FC = () => {
                             left: 0,
                             zIndex: 999,
                             boxShadow: '0 2px 8px #f0f1f2',
+                            // color: "white",
                         },
                     }}
                     style={{
                         paddingTop: 48,
                     }}
                     extra={[
-                        <Input.Search
-                            key="search"
-                            style={{
-                                width: 240,
-                            }}
-                        />,
-                        <Button key="3">操作一</Button>,
-                        <Button key="2" type="primary">
-                            操作一
-                        </Button>,
+                        // <Input.Search
+                        //     key="search"
+                        //     style={{
+                        //         width: 240,
+                        //     }}
+                        // />,
+                        // <Button key="4" icon={<SearchOutlined />} type='text'></Button>,
+                        <Button key="5" icon={<QuestionCircleOutlined />} type='text'></Button>, ,
+                        <span>
+                            <Badge count={11} size='small'>
+                            <Button key="6" icon={<BellOutlined />} type='text'></Button>
+                            </Badge>
+                        </span>,
+                        <Avatar src="https://joeschmoe.io/api/v1/random"/>,
+                        <div style={{display: 'flex', flexDirection: 'column', justifyContent:'center', alignContent: 'center'}}>
+                            Wong, Justina
+                        </div>
                     ]}
                 >
-                    <div
-                        style={{
-                            height: '120vh',
-                        }}
-                    >
-                        <Result
-                            status="404"
-                            style={{
-                                height: '100%',
-                                background: '#fff',
-                            }}
-                            title="Hello World"
-                            subTitle="Sorry, you are not authorized to access this page."
-                            extra={<Button type="primary">Back Home</Button>}
-                        />
-                    </div>
+                    <ProCard direction="column" ghost gutter={[0, 16]}>
+                        <ProCard style={{ height: 200 }}>
+                            <div>Home TODO: Breadcrumb</div>
+                            <div>Ideas Hub</div>
+                            <div>
+                                <Input></Input><Button type='primary'>Search</Button>
+                            </div>
+                            <PageHeader
+                                footer={
+                                <Tabs defaultActiveKey="1">
+                                    <TabPane tab="All Posts" key="1" />
+                                    <TabPane tab="My Posts" key="2" />
+                                </Tabs>
+                            }>
+                            </PageHeader>
+                        </ProCard>
+                        <ProCard gutter={16} ghost style={{ height: '100%' }}>
+                            <ProCard colSpan={16} style={{ height: 600 }}>
+                            </ProCard>
+                            <ProCard colSpan={8} style={{ height: '100%' }}/>
+                        </ProCard>
+                    </ProCard>
+                    {/*<div*/}
+                    {/*    style={{*/}
+                    {/*        height: '120vh',*/}
+                    {/*    }}*/}
+                    {/*>*/}
+
+                    {/*    <Result*/}
+                    {/*        status="404"*/}
+                    {/*        style={{*/}
+                    {/*            height: '70%',*/}
+                    {/*            background: '#fff',*/}
+                    {/*        }}*/}
+                    {/*        title="Hello World"*/}
+                    {/*        subTitle="Sorry, you are not authorized to access this page."*/}
+                    {/*        extra={<Button type="primary">Back Home</Button>}*/}
+                    {/*    />*/}
+                    {/*</div>*/}
                 </PageContainer>
             </ ProLayout >
         </div>
