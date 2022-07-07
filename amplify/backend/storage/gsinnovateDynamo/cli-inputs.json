@@ -1,0 +1,10 @@
+{
+  "resourceName": "gsinnovateDynamo",
+  "tableName": "testtable001",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

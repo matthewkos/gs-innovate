@@ -15,6 +15,14 @@
     },
     "s3Key": {
       "Type": "String"
+    },
+    "storagegsinnovateDynamoName": {
+      "Type": "String",
+      "Default": "storagegsinnovateDynamoName"
+    },
+    "storagegsinnovateDynamoArn": {
+      "Type": "String",
+      "Default": "storagegsinnovateDynamoArn"
     }
   },
   "Conditions": {
@@ -47,12 +55,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "lambdaHealthcheck",
+            "lambdanewitemintesttabl001",
             {
               "Fn::Join": [
                 "",
                 [
-                  "lambdaHealthcheck",
+                  "lambdanewitemintesttabl001",
                   "-",
                   {
                     "Ref": "env"
@@ -89,12 +97,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "gsinnovate01LambdaRole78ed22e2",
+            "gsinnovate01LambdaRole5c190496",
             {
               "Fn::Join": [
                 "",
                 [
-                  "gsinnovate01LambdaRole78ed22e2",
+                  "gsinnovate01LambdaRole5c190496",
                   "-",
                   {
                     "Ref": "env"
@@ -160,6 +168,34 @@
                   }
                 ]
               }
+            },
+            {
+              "Effect": "Allow",
+              "Action": [
+                "dynamodb:DescribeTable",
+                "dynamodb:GetItem",
+                "dynamodb:Query",
+                "dynamodb:Scan",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem"
+              ],
+              "Resource": [
+                {
+                  "Ref": "storagegsinnovateDynamoArn"
+                },
+                {
+                  "Fn::Join": [
+                    "/",
+                    [
+                      {
+                        "Ref": "storagegsinnovateDynamoArn"
+                      },
+                      "index/*"
+                    ]
+                  ]
+                }
+              ]
             }
           ]
         }

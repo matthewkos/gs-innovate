@@ -1,12 +1,12 @@
 export type AmplifyDependentResourcesAttributes = {
     "function": {
-        "lambdaHealthcheck": {
+        "lambdaLocaltime": {
             "Name": "string",
             "Arn": "string",
             "Region": "string",
             "LambdaExecutionRole": "string"
         },
-        "lambdaLocaltime": {
+        "lambdanewitemintesttabl001": {
             "Name": "string",
             "Arn": "string",
             "Region": "string",
@@ -18,6 +18,16 @@ export type AmplifyDependentResourcesAttributes = {
             "RootUrl": "string",
             "ApiName": "string",
             "ApiId": "string"
+        }
+    },
+    "storage": {
+        "gsinnovateDynamo": {
+            "Name": "string",
+            "Arn": "string",
+            "StreamArn": "string",
+            "PartitionKeyName": "string",
+            "PartitionKeyType": "string",
+            "Region": "string"
         }
     }
 }

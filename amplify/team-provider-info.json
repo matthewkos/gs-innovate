@@ -13,14 +13,13 @@
     },
     "categories": {
       "function": {
-        "lambdaHealthcheck": {
-          "proj": "gsinnovate",
-          "deploymentBucketName": "amplify-gsinnovate01-staging-24003-deployment",
-          "s3Key": "amplify-builds/lambdaHealthcheck-4f57725a654144546162-build.zip"
-        },
         "lambdaLocaltime": {
           "deploymentBucketName": "amplify-gsinnovate01-staging-24003-deployment",
           "s3Key": "amplify-builds/lambdaLocaltime-634f594731634c614763-build.zip"
+        },
+        "lambdanewitemintesttabl001": {
+          "deploymentBucketName": "amplify-gsinnovate01-staging-24003-deployment",
+          "s3Key": "amplify-builds/lambdanewitemintesttabl001-6e6f59634a6e37394172-build.zip"
         }
       }
     }
