@@ -129,7 +129,7 @@ const MainPage: React.FC = () => {
                                 footer={
                                 <Tabs defaultActiveKey="1">
                                     <TabPane tab="All Posts" key="1" />
-                                    <TabPane tab="My Posts" key="2" />
+                                    <TabPane tab="Subscribed Posts" key="2" />
                                 </Tabs>
                             }>
                             </PageHeader>
@@ -153,7 +153,7 @@ const MainPage: React.FC = () => {
                                 </ProCard>
                             </ProCard>
                             <ProCard gutter={[8, 8]} ghost wrap split='horizontal'>
-                                <Button style={{height: 80, width: '100%'}} type='primary'>Create Post</Button>
+                                <Button style={{height: 80, width: '100%', margin: 4}} type='primary'>Create Post</Button>
                                 <ProCard colSpan='100%' style={{ height: 300 }} title='Trending Topics' headerBordered/>
                                 <ProCard colSpan='100%' style={{ height: 200 }} title='Subscribed Topics' headerBordered/>
                             </ProCard>
