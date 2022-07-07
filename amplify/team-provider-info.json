@@ -27,7 +27,7 @@
         },
         "lambdaManagePost": {
           "deploymentBucketName": "amplify-gsinnovate01-staging-24003-deployment",
-          "s3Key": "amplify-builds/lambdaManagePost-63464241786849732f43-build.zip"
+          "s3Key": "amplify-builds/lambdaManagePost-6b42452b6348596a4164-build.zip"
         },
         "lambdaManageUser": {
           "deploymentBucketName": "amplify-gsinnovate01-staging-24003-deployment",
@@ -35,7 +35,7 @@
         },
         "lambdaAddIdea": {
           "deploymentBucketName": "amplify-gsinnovate01-staging-24003-deployment",
-          "s3Key": "amplify-builds/lambdaAddIdea-644a443668423352595a-build.zip"
+          "s3Key": "amplify-builds/lambdaAddIdea-6134304d4e716735476c-build.zip"
         },
         "lambdaManageFeedback": {
           "deploymentBucketName": "amplify-gsinnovate01-staging-24003-deployment",
@@ -43,7 +43,7 @@
         },
         "lambdaManageComment": {
           "deploymentBucketName": "amplify-gsinnovate01-staging-24003-deployment",
-          "s3Key": "amplify-builds/lambdaManageComment-7969575a6b595567716c-build.zip"
+          "s3Key": "amplify-builds/lambdaManageComment-304539652f3953547366-build.zip"
         }
       }
     }
