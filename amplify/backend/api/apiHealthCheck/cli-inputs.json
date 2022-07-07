@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "paths": {
+    "/currenttime": {
+      "name": "/currenttime",
+      "lambdaFunction": "lambdaLocaltime",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/newitemintesttable001": {
+      "name": "/newitemintesttable001",
+      "lambdaFunction": "lambdanewitemintesttabl001",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
