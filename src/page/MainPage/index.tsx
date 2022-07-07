@@ -4,6 +4,7 @@ import {PageContainer, ProCard, ProLayout} from '@ant-design/pro-components' ;
 import {Avatar, Badge, Button, Input, PageHeader, Result, Select, Tabs, Tag} from 'antd' ;
 import { useState } from 'react' ;
 import {Icon} from "@ant-design/compatible";
+import SearchBar from "../../components/SearchBar";
 
 const defaultProps = {
     routes : [
@@ -30,33 +31,45 @@ const defaultProps = {
 
 const { TabPane } = Tabs;
 
-const ForumPost = (image: string, title: string, body: string, likes: number, comments: number, postdate: number, bordered: boolean) => {
+const ForumPost = (image: string,
+                   title: string,
+                   body: string,
+                   likes: number,
+                   comments: number,
+                   postdate: number,
+                   bordered: boolean) => {
     return (
         <ProCard colSpan='100%' bordered={bordered}>
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center'}}>
-                <Avatar></Avatar>
-                <div style={{marginLeft: 10}}>
+            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', marginBottom: 10,}}>
+                <div style={{minWidth: 32, minHeight: 32, aspectRatio: 'auto'}}>
+                    <Avatar></Avatar>
+                </div>
+                <div style={{overflow: "hidden",marginLeft: 16, fontSize: '1.25em', fontWeight: "bold"}}>
                     {title}
                 </div>
             </div>
-            <div>
+            <p style={{overflowWrap: "break-word", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"}}>
                 {body}
+            </p>
+            <div style={{display: 'flex', width: '100%', justifyContent: 'space-between'}}>
+                <div style={{color: "#00000080"}}>
+                    <span style={{cursor: "pointer"}}>{likes} Likes</span> | <span style={{cursor: "pointer"}}>{comments} Comments</span>
+                </div>
+                <div style={{color: "#00000080"}}>
+                    {postdate} days ago
+                </div>
             </div>
-            <div>
-                {likes} Likes | {comments} Comments
-            </div>
-            <div>
-                {postdate} days ago
-            </div>
+
         </ProCard>
     );
 }
+
 
 const MainPage: React.FC = () => {
     const [ pathname , setPathname ] = useState ( '/welcome' ) ;
     return (
         <div>
-            < ProLayout
+            <ProLayout
                 navTheme='light'
                 route = { defaultProps }
                 location = { {
@@ -123,9 +136,9 @@ const MainPage: React.FC = () => {
                     <ProCard direction="column" ghost gutter={[0, 16]}>
                         <ProCard style={{ height: 200 }}>
                             <div>Home TODO: Breadcrumb</div>
-                            <div>Ideas Hub</div>
+                            <h1>Ideas Hub</h1>
                             <div>
-                                <Input></Input><Button type='primary'>Search</Button>
+                                <SearchBar placeholder={"Search Here..."}/>
                             </div>
                             <PageHeader
                                 footer={
@@ -149,7 +162,7 @@ const MainPage: React.FC = () => {
                                     </div>
                                 </ProCard>
                                 <ProCard style={{ height: 600 }} split='horizontal'>
-                                    {ForumPost('1', 'Centralised Documentation Platform', 'Justina Wong is a nice person', 2, 1, 69,true)}
+                                    {ForumPost('1', 'Centralised Documentation Platform Centralised Documentation Platform Centralised Documentation Platform Centralised Documentation Platform Centralised Documentation Platform Centralised Documentation Platform Centralised Documentation Platform Centralised Documentation Platform Centralised Documentation Platform Centralised Documentation Platform ', 'Justina Wong is a nice personJustina Wong is a nice personJustina Wong is a nice personJustina Wong is a nice personJustina Wong is a nice personJustina Wong is a nice personJustina Wong is a nice personJustina Wong is a nice personJustina Wong is a nice personJustina Wong is a nice personJustina Wong is a nice personJustina Wong is a nice personJustina Wong is a nice personJustina Wong is a nice personJustina Wong is a nice personJustina Wong is a nice personJustina Wong is a nice personJustina Wong is a nice personJustina Wong is a nice personJustina Wong is a nice person', 2, 1, 69,true)}
                                     {ForumPost('1', 'Centralised Documentation Platform', 'Justina Wong is a very helpful', 2, 1, 69,false)}
                                     {ForumPost('1', 'Centralised Documentation Platform', 'Justina Wong is not a bully', 2, 1, 69,true)}
                                 </ProCard>
@@ -161,23 +174,6 @@ const MainPage: React.FC = () => {
                             </ProCard>
                         </ProCard>
                     </ProCard>
-                    {/*<div*/}
-                    {/*    style={{*/}
-                    {/*        height: '120vh',*/}
-                    {/*    }}*/}
-                    {/*>*/}
-
-                    {/*    <Result*/}
-                    {/*        status="404"*/}
-                    {/*        style={{*/}
-                    {/*            height: '70%',*/}
-                    {/*            background: '#fff',*/}
-                    {/*        }}*/}
-                    {/*        title="Hello World"*/}
-                    {/*        subTitle="Sorry, you are not authorized to access this page."*/}
-                    {/*        extra={<Button type="primary">Back Home</Button>}*/}
-                    {/*    />*/}
-                    {/*</div>*/}
                 </PageContainer>
             </ ProLayout >
         </div>
