@@ -3,11 +3,16 @@ import Layout from '../Layout';
 import {PageContainer, ProCard, ProForm, ProFormGroup, ProFormText} from "@ant-design/pro-components";
 import {Breadcrumb, Button, PageHeader, Tabs} from "antd";
 import TextArea from "antd/lib/input/TextArea";
+import {useNavigate} from "react-router-dom";
 
 
 const { TabPane } = Tabs;
 
 const Index = () => {
+    const navigate = useNavigate();
+    const onClick = () => {
+      navigate('/new_proposal');
+    };
     const body = (
         <div>
             <ProCard direction="column" ghost gutter={[0, 16]}>
@@ -35,7 +40,7 @@ const Index = () => {
                     Proposed Solution:
                     <TextArea name="Problem Statement" placeholder='How does your proposed idea solve this problem' />
                 </ProFormGroup>
-                <Button type='primary'>Analyze</Button>
+                <Button type='primary' onClick={onClick}>Analyze</Button>
                 <Button>Save</Button>
             </ProCard>
         </div>

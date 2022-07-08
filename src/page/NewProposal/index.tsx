@@ -6,6 +6,7 @@ import {Avatar, Breadcrumb, Button, Card, Col, Row, Tooltip} from 'antd';
 import Meta from 'antd/lib/card/Meta';
 import AvatarGroup from '../../components/Avatar';
 import Layout from "../Layout";
+import {useNavigate} from "react-router-dom";
 
 const defaultProps = {
     routes : [
@@ -32,6 +33,16 @@ const defaultProps = {
 
 const NewProposal: React.FC = () => {
     const [ pathname , setPathname ] = useState ( '/welcome' ) ;
+    const navigate = useNavigate();
+    const onClick = () => {
+        navigate('/proposal/similarproject')
+    };
+    const onClickReturn = () => {
+        navigate('/proposal')
+    }
+    const onClickContinue = () => {
+        navigate('/proposal/moredetail')
+    }
     const body = (
         <div>
             <ProCard direction="column" ghost gutter={[0, 16]}>
@@ -53,6 +64,7 @@ const NewProposal: React.FC = () => {
                     <Row gutter={16} style={{height: 600}}>
                         <Col span={8}>
                             <Card
+                            onClick={onClick}
                             hoverable
                             cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" height="200"/>}
                             >
@@ -89,8 +101,8 @@ const NewProposal: React.FC = () => {
                         </Col>
                     </Row>
                     <div style={{paddingTop: 20, display: 'flex', flexDirection:'row', justifyContent:'space-between'}}>
-                        <Button>Return to Form</Button>
-                        <Button style={{backgroundColor: '#1890FF', color:'white'}}>Continue</Button>
+                        <Button onClick={onClickReturn}>Return to Form</Button>
+                        <Button style={{backgroundColor: '#1890FF', color:'white'}} onClick={onClickContinue}>Continue</Button>
                     </div>
                 </div>
         </div>

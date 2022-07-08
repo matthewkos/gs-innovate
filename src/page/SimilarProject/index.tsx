@@ -4,6 +4,7 @@ import {ProCard} from "@ant-design/pro-components";
 import { AntDesignOutlined, UserOutlined } from '@ant-design/icons';
 import {Avatar, Divider, Tooltip, Breadcrumb, Select, Button} from "antd";
 import AvatarGroup from "../../components/Avatar";
+import {useNavigate} from "react-router-dom";
 
 
 const body1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tincidunt dui ut ornare lectus sit amet est placerat. Lacus vestibulum sed arcu non odio euismod lacinia. At tempor commodo ullamcorper a. At elementum eu facilisis sed odio morbi quis commodo. Quisque egestas diam in arcu cursus euismod. Elit sed vulputate mi sit amet. Varius morbi enim nunc faucibus a pellentesque sit amet. Tellus in hac habitasse platea dictumst vestibulum. Id faucibus nisl tincidunt eget nullam. Pretium fusce id velit ut tortor. Aliquam sem et tortor consequat id porta nibh venenatis cras. Arcu dui vivamus arcu felis bibendum ut. Suscipit adipiscing bibendum est ultricies integer quis auctor.\n" +
@@ -13,6 +14,11 @@ const body1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
 const body2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tincidunt dui ut ornare lectus sit amet est placerat. Lacus vestibulum sed arcu non odio euismod lacinia. At tempor commodo ullamcorper a. At elementum eu facilisis sed odio morbi quis commodo. Quisque egestas diam in arcu cursus euismod. Elit sed vulputate mi sit amet. Varius morbi enim nunc faucibus a pellentesque sit amet. Tellus in hac habitasse platea dictumst vestibulum. Id faucibus nisl tincidunt eget nullam. Pretium fusce id velit ut tortor. Aliquam sem et tortor consequat id porta nibh venenatis cras. Arcu dui vivamus arcu felis bibendum ut. Suscipit adipiscing bibendum est ultricies integer quis auctor."
 
 const Index: React.FC = () => {
+    const navigate = useNavigate();
+    const onClick = () => {
+        navigate('/new_proposal');
+        }
+    ;
     const body = (
         <div>
             <ProCard direction="column" ghost gutter={[0, 16]}>
@@ -44,7 +50,7 @@ const Index: React.FC = () => {
                 </ProCard>
                 <div>
                     <div>
-                        <Button>Back to Similar Projects</Button>
+                        <Button onClick={onClick}>Back to Similar Projects</Button>
                     </div>
                     <div style={{
                         display: 'flex',
@@ -57,9 +63,7 @@ const Index: React.FC = () => {
                     </div>
 
                 </div>
-
             </ProCard>
-
         </div>
     );
     return (
