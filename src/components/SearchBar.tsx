@@ -41,8 +41,7 @@ class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
                         // @ts-ignore
                         {this.onInput($event?.target?.value)}
                 }/>
-                <Button type="primary" shape="circle" icon={<SearchOutlined />} onClick={()=>{this.onSearch()}}/>
-
+                <Button style={{marginLeft: 20}} type="primary" shape="circle" icon={<SearchOutlined />} onClick={()=>{this.onSearch()}}/>
             </div>
         )
     }

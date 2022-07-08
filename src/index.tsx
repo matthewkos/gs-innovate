@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import MainPage from "./page/MainPage";
+import Proposal from "./page/Proposal";
+import Layout from "./page/Layout";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,8 +15,9 @@ root.render(
   <React.StrictMode>
       <BrowserRouter>
           <Routes>
+              <Route path="/ideahub" element={<MainPage />} />
+              <Route path="/proposal" element={<Proposal />} />
               <Route path="/" element={<App />} />
-              <Route path="/home" element={<MainPage />} />
           </Routes>
       </BrowserRouter>
   </React.StrictMode>
