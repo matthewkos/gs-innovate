@@ -8,6 +8,7 @@ import MainPage from "./page/MainPage";
 import Proposal from "./page/Proposal";
 import Layout from "./page/Layout";
 import NewProposal from './page/NewProposal';
+import SimilarProject from "./page/SimilarProject";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -17,7 +18,10 @@ root.render(
       <BrowserRouter>
           <Routes>
               <Route path="/ideahub" element={<MainPage />} />
-              <Route path="/proposal" element={<Proposal />} />
+              <Route path="/proposal" element={<Proposal />}>
+                  {/*<Route path="similarproject" element={<SimilarProject />} />*/}
+              </Route>
+              <Route path="/proposal/similarproject" element={<SimilarProject />} />
               <Route path="/" element={<App />} />
               <Route path="/new_proposal" element={<NewProposal/>} />
           </Routes>

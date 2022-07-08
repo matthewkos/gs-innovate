@@ -2,7 +2,6 @@ import * as React from 'react';
 import Layout from '../Layout';
 import {PageContainer, ProCard, ProForm, ProFormGroup, ProFormText} from "@ant-design/pro-components";
 import {Breadcrumb, Button, PageHeader, Tabs} from "antd";
-import SearchBar from "../../components/SearchBar";
 import TextArea from "antd/lib/input/TextArea";
 
 
@@ -26,13 +25,15 @@ const Index = () => {
             </div>
             <ProCard style={{ height: 600 }}>
                 < ProFormGroup>
-                    <TextArea name="Title" placeholder='Give your project a name' />
+                    <ProFormText width="xl" name="Title" label="Title" placeholder='Give your project a name' />
                 </ProFormGroup>
                 < ProFormGroup>
-                    <ProFormText width="xl" name="Problem Statement" label="Problem Statement" placeholder='Give your project a name' />
+                    Problem Statement :
+                    <TextArea name="Problem Statement" size='large' style={{width: '1000px'}} placeholder='What problem are you trying to solve' />
                 </ProFormGroup>
                 < ProFormGroup>
-                    <ProFormText width="xl" name="Proposed Solution" label="Proposed Solution" placeholder='Give your project a name' />
+                    Proposed Solution:
+                    <TextArea name="Problem Statement" placeholder='How does your proposed idea solve this problem' />
                 </ProFormGroup>
                 <Button type='primary'>Analyze</Button>
                 <Button>Save</Button>
