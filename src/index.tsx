@@ -7,6 +7,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import MainPage from "./page/MainPage";
 import Proposal from "./page/Proposal";
 import Layout from "./page/Layout";
+import NewProposal from './page/NewProposal';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -18,6 +19,7 @@ root.render(
               <Route path="/ideahub" element={<MainPage />} />
               <Route path="/proposal" element={<Proposal />} />
               <Route path="/" element={<App />} />
+              <Route path="/new_proposal" element={<NewProposal/>} />
           </Routes>
       </BrowserRouter>
   </React.StrictMode>
