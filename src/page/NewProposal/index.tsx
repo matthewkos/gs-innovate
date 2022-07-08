@@ -1,10 +1,11 @@
 import { ProCard, ProLayout } from '@ant-design/pro-components';
-import { FormOutlined , ProfileOutlined, AppstoreOutlined } from '@ant-design/icons' ;
+import {FormOutlined, ProfileOutlined, AppstoreOutlined, UserOutlined, AntDesignOutlined} from '@ant-design/icons' ;
 import * as React from 'react';
 import { useState } from 'react';
-import { Avatar, Button, Card, Col, Row } from 'antd';
+import {Avatar, Breadcrumb, Button, Card, Col, Row, Tooltip} from 'antd';
 import Meta from 'antd/lib/card/Meta';
-import AvatarGroup from '../../components/ProjectCard';
+import AvatarGroup from '../../components/Avatar';
+import Layout from "../Layout";
 
 const defaultProps = {
     routes : [
@@ -33,17 +34,23 @@ const NewProposal: React.FC = () => {
     const [ pathname , setPathname ] = useState ( '/welcome' ) ;
     const body = (
         <div>
-            <ProLayout
-                navTheme='light'
-                route = { defaultProps }
-                location = { {
-                    pathname ,
-                } }
-                fixSiderbar
-                headerRender = { false }
-                onMenuHeaderClick = { ( e ) => console . log ( e ) }>
+            <ProCard direction="column" ghost gutter={[0, 16]}>
+                <ProCard style={{ height: 150 }}>
+                    <Breadcrumb>
+                        <Breadcrumb.Item>Proposal Form</Breadcrumb.Item>
+                        <Breadcrumb.Item>Idea</Breadcrumb.Item>
+                        <Breadcrumb.Item>Similar Projects</Breadcrumb.Item>
+                        <Breadcrumb.Item>Project Information</Breadcrumb.Item>
+                    </Breadcrumb>
+                    <h1>Improved Search Engine for GS Firmwide Search</h1>
+                    <div>SME Review Failed</div>
+                </ProCard>
+            </ProCard>
+            <div>
+                Similar Project
+            </div>
                 <div className="site-card-wrapper">
-                    <Row gutter={16}>
+                    <Row gutter={16} style={{height: 600}}>
                         <Col span={8}>
                             <Card
                             hoverable
@@ -86,10 +93,9 @@ const NewProposal: React.FC = () => {
                         <Button style={{backgroundColor: '#1890FF', color:'white'}}>Continue</Button>
                     </div>
                 </div>
-                </ProLayout>
         </div>
     );
-    return body;
+    return <Layout body={body} />;
 };  
 
 export default NewProposal

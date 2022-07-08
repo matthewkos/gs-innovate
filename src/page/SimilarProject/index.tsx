@@ -3,6 +3,7 @@ import Layout from "../Layout";
 import {ProCard} from "@ant-design/pro-components";
 import { AntDesignOutlined, UserOutlined } from '@ant-design/icons';
 import {Avatar, Divider, Tooltip, Breadcrumb, Select, Button} from "antd";
+import AvatarGroup from "../../components/Avatar";
 
 
 const body1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tincidunt dui ut ornare lectus sit amet est placerat. Lacus vestibulum sed arcu non odio euismod lacinia. At tempor commodo ullamcorper a. At elementum eu facilisis sed odio morbi quis commodo. Quisque egestas diam in arcu cursus euismod. Elit sed vulputate mi sit amet. Varius morbi enim nunc faucibus a pellentesque sit amet. Tellus in hac habitasse platea dictumst vestibulum. Id faucibus nisl tincidunt eget nullam. Pretium fusce id velit ut tortor. Aliquam sem et tortor consequat id porta nibh venenatis cras. Arcu dui vivamus arcu felis bibendum ut. Suscipit adipiscing bibendum est ultricies integer quis auctor.\n" +
@@ -23,14 +24,7 @@ const Index: React.FC = () => {
                         <Breadcrumb.Item>Project Information</Breadcrumb.Item>
                     </Breadcrumb>
                     <h1>Improved Search Engine for GS Firmwide Search</h1>
-                    <Avatar.Group>
-                        <Avatar src="https://joeschmoe.io/api/v1/random" />
-                        <Avatar style={{ backgroundColor: '#f56a00' }}>K</Avatar>
-                        <Tooltip title="Ant User" placement="top">
-                            <Avatar style={{ backgroundColor: '#87d068' }} icon={<UserOutlined />} />
-                        </Tooltip>
-                        <Avatar style={{ backgroundColor: '#1890ff' }} icon={<AntDesignOutlined />} />
-                    </Avatar.Group>
+                    <AvatarGroup />
                     <div>SME Review Failed</div>
                 </ProCard>
             </ProCard>
