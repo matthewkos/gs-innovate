@@ -60,22 +60,19 @@ const convertUrlType = (param, type) => {
  ********************************/
 
 app.get(path, function (req, res) {
-  let getItemParams = {
+  let queryParams = {
     TableName: tableName,
   }
-
-  dynamodb.get(getItemParams, (err, data) => {
-    if (err) {
-      res.statusCode = 500;
-      res.json({ error: 'Could not load items: ' + err.message });
-    } else {
-      if (data.Item) {
-        res.json(data.Item);
-      } else {
-        res.json(data);
+  const resultList = [];
+  dynamodb.scan(queryParams).eachPage((err, data, done) => {
+    if (data != null) {
+      for (let index = 0; index < data.Items.length; index++) {
+        resultList.push(data.Items[index]);
       }
     }
+    res.json(resultList);
   });
+
 });
 
 /*****************************************
