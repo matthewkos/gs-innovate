@@ -1,0 +1,21 @@
+feed07071651-1      1657184263589       pandpk
+
+feed07071701-1      1657184526475       pandpk
+
+feed07071701-2      1657184526475       justinawo
+
+feed07071633-1      07071633            tinklok
+
+
+
+comment-1657188118784   1657186618368
+comment-1657188203447   1657186930289
+comment-1657188075531   1657186930289
+
+
+New endpoints:
+
+1. /ideas and /posts for Ideas and Posts
+2. /addComment and /addFeedback ---> /comment POST and /feedback POST
+3. GET /comments/:postId GET /feedback/:ideaId
+4. GET /posts/:userId GET /ideas/:userId

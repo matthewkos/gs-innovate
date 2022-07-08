@@ -146,6 +146,7 @@ app.put(path, function(req, res) {
   if (userIdPresent) {
     req.body['userId'] = req.apiGateway.event.requestContext.identity.cognitoIdentityId || UNAUTH;
   }
+  
 
   let putItemParams = {
     TableName: tableName,
