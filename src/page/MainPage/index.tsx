@@ -1,44 +1,11 @@
 import * as React from "react";
-import { FormOutlined , ProfileOutlined , UserOutlined, AppstoreOutlined, QuestionCircleOutlined, BellOutlined } from '@ant-design/icons' ;
-import {PageContainer, ProCard, ProLayout} from '@ant-design/pro-components' ;
-import {Avatar, Badge, Breadcrumb, Button, PageHeader, Select, Tabs, Tag} from 'antd' ;
-import { useState } from 'react' ;
+import { ProCard } from '@ant-design/pro-components' ;
+import {Avatar, Breadcrumb, Button, PageHeader, Select, Tabs, Tag} from 'antd' ;
 import SearchBar from "../../components/SearchBar";
-import {useLocation, useNavigate, useNavigationType} from "react-router-dom";
-import Layout from "../Layout";
-
-const defaultProps = {
-    routes : [
-        {
-            path : '/proposal' ,
-            name : 'New Proposal' ,
-            icon : <FormOutlined /> ,
-            component : './Login/index' ,
-        } ,
-        {
-            path : '/ideahub' ,
-            name : 'Ideas Hub' ,
-            icon : <AppstoreOutlined /> ,
-            component : './Welcome' ,
-        } ,
-        {
-            path : '/admin/sub-page3' ,
-            name : 'Past Projects' ,
-            icon : <ProfileOutlined />,
-            component : './Welcome' ,
-        } ,
-        {
-            path : '/admin/sub-page' ,
-            name : 'My Projects' ,
-            icon : <ProfileOutlined />,
-            component : './Welcome' ,
-        } ,
-    ] ,
-};
 
 const { TabPane } = Tabs;
 
-const ForumPost = (image: string,
+export const ForumPost = (image: string,
                    title: string,
                    body: string,
                    likes: number,
@@ -66,7 +33,6 @@ const ForumPost = (image: string,
                     {postdate} days ago
                 </div>
             </div>
-
         </ProCard>
     );
 }
@@ -74,9 +40,6 @@ const ForumPost = (image: string,
 const TrendingTopicsList = ['#regeng', '#userexperience', '#sdlc', '']
 
 const MainPage: React.FC = () => {
-    const [ pathname , setPathname ] = useState ( '/welcome' ) ;
-    const navigation = useNavigate();
-    const location = useLocation();
     return (
         <div>
             <ProCard direction="column" ghost gutter={[0, 16]}>

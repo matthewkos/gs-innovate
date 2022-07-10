@@ -2,38 +2,11 @@ import { ProCard, ProLayout } from '@ant-design/pro-components';
 import {FormOutlined, ProfileOutlined, AppstoreOutlined, UserOutlined, AntDesignOutlined} from '@ant-design/icons' ;
 import * as React from 'react';
 import { useState } from 'react';
-import {Avatar, Breadcrumb, Button, Card, Col, Row, Tooltip} from 'antd';
-import Meta from 'antd/lib/card/Meta';
-import AvatarGroup from '../../components/Avatar';
-import Layout from "../Layout";
+import { Breadcrumb, Button, Col, Row} from 'antd';
 import {useNavigate} from "react-router-dom";
 import ProjectCardDisplay from "../../components/ProjectCardDisplay";
 
-const defaultProps = {
-    routes : [
-        {
-            path : '/welcome' ,
-            name : 'GS Innovate' ,
-            icon : <FormOutlined /> ,
-            component : './Welcome' ,
-        } ,
-        {
-            path : '/admin/sub-page2' ,
-            name : 'Past Projects' ,
-            icon : <AppstoreOutlined /> ,
-            component : './Welcome' ,
-        } ,
-        {
-            path : '/admin/sub-page3' ,
-            name : 'Profile' ,
-            icon : <ProfileOutlined />,
-            component : './Welcome' ,
-        } ,
-    ] ,
-};
-
 const NewProposal: React.FC = () => {
-    const [ pathname , setPathname ] = useState ( '/welcome' ) ;
     const navigate = useNavigate();
     const onClick = () => {
         navigate('/proposal/similarproject')

@@ -17,34 +17,26 @@ const defaultProps = {
             path : '/proposal' ,
             name : 'New Proposal' ,
             icon : <FormOutlined /> ,
-            component : './Login/index' ,
         } ,
         {
             path : '/ideahub' ,
             name : 'Ideas Hub' ,
             icon : <AppstoreOutlined /> ,
-            component : './Welcome' ,
         } ,
         {
             path : '/pastprojects' ,
             name : 'Past Projects' ,
             icon : <ProfileOutlined />,
-            component : './Welcome' ,
         } ,
         {
             path : '/myprojects' ,
             name : 'My Projects' ,
             icon : <UserOutlined />,
-            component : './Welcome' ,
         } ,
     ] ,
 };
 
-interface Props {
-  body?: JSX.Element;
-}
-
-const Layout: React.FC<Props> = (props) => {
+const Layout: React.FC = () => {
     const navigation = useNavigate();
     const location = useLocation();
     return (
@@ -56,7 +48,6 @@ const Layout: React.FC<Props> = (props) => {
             navTheme="light"
             fixSiderbar
             headerRender={false}
-            // onMenuHeaderClick={(e) => console.log(e)}
             menuItemRender={(item, dom) => (
                 <a
                     onClick={() => {
