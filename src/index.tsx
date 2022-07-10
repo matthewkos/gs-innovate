@@ -11,6 +11,7 @@ import NewProposal from './page/NewProposal';
 import SimilarProject from "./page/SimilarProject";
 import MoreDetails from "./page/MoreDetails";
 import PastProjects from "./page/PastProjects";
+import MyProjects from "./page/MyProjects";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -28,6 +29,7 @@ root.render(
               <Route path="/new_proposal" element={<NewProposal/>} />
               <Route path="/proposal/moredetail" element={<MoreDetails />} />
               <Route path="/pastprojects" element={<PastProjects />} />
+              <Route path="/myprojects" element={<MyProjects />} />
           </Routes>
       </BrowserRouter>
   </React.StrictMode>

@@ -2,15 +2,12 @@ import * as React from 'react';
 import Layout from "../Layout";
 import {ProCard} from "@ant-design/pro-components";
 import {Breadcrumb, Button, Col, Row} from "antd";
-import AvatarGroup from "../../components/Avatar";
 import SearchBar from "../../components/SearchBar";
-import HashTags from "../../components/HashTags";
 import ProjectCardDisplay from "../../components/ProjectCardDisplay";
+import {mapHashTagsListToHasTags} from "../../Utils/utils";
 
 const PastProjects: React.FC = () => {
     const hashTagsList: string[] = ['All', '#regeng', '#userexperience', '#opsmanagement']
-    const mapHashTagsListToHasTags = (hashTagsList: string[]) =>
-        hashTagsList.map(hashTags => <HashTags hashTag={hashTags}/>);
     const body = (
       <div>
           <ProCard direction="column" ghost gutter={[0, 16]}>

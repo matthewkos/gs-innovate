@@ -32,7 +32,7 @@ const defaultProps = {
             component : './Welcome' ,
         } ,
         {
-            path : '/admin/sub-page' ,
+            path : '/myprojects' ,
             name : 'My Projects' ,
             icon : <UserOutlined />,
             component : './Welcome' ,
