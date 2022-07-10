@@ -22,7 +22,7 @@ const Index: React.FC = () => {
     const body = (
         <div>
             <ProCard direction="column" ghost gutter={[0, 16]}>
-                <ProCard style={{ height: 175 }}>
+                <ProCard style={{ height: 'wrap_content', marginBottom: 20}}>
                     <Breadcrumb>
                         <Breadcrumb.Item>Proposal Form</Breadcrumb.Item>
                         <Breadcrumb.Item>Idea</Breadcrumb.Item>
@@ -31,38 +31,26 @@ const Index: React.FC = () => {
                     </Breadcrumb>
                     <h1>Improved Search Engine for GS Firmwide Search</h1>
                     <AvatarGroup />
-                    <div>SME Review Failed</div>
+                    <div style={{paddingTop:20, color:'rgb(255, 0, 0, 0.45)'}}>SME Review Failed</div>
                 </ProCard>
             </ProCard>
-            <ProCard direction="column" ghost gutter={[0, 16]} wrap>
-                <ProCard style={{ height: 20 }} />
-                <ProCard gutter={16} ghost style={{ height: 400 }}>
+            <ProCard direction="column" ghost gutter={[0, 16]}>
+                <ProCard style={{ height: '100%' }}>
                     <ProCard>
                         <h2>Project Description</h2>
-                        <div>
+                        <div style={{marginBottom: 30}}>
                             {body1}
                         </div>
                         <h2>Evaluation</h2>
                         <div>
                             {body2}
                         </div>
+                        <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between', marginTop: 40}}>
+                            <Button onClick={onClick}>Back to Similar Projects</Button>
+                            <Button type='primary'>Next Project</Button>
+                        </div>
                     </ProCard>
                 </ProCard>
-                <div>
-                    <div>
-                        <Button onClick={onClick}>Back to Similar Projects</Button>
-                    </div>
-                    <div style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        justifyContent: 'right',
-                        alignItems: 'center',
-                        padding: '8px 16px',
-                        gap: '8px'}}>
-                        <Button type='primary' >&gt; Next Project</Button>
-                    </div>
-
-                </div>
             </ProCard>
         </div>
     );

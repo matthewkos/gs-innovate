@@ -11,9 +11,9 @@ const Index = () => {
       navigate('/new_proposal');
     };
     const body = (
-        <div>
+        <div style={{height: '100%'}}>
             <ProCard direction="column" ghost gutter={[0, 16]} style={{marginBottom:30}}>
-                <ProCard style={{ height: 150 }}>
+                <ProCard style={{ height: 'wrap_content' }}>
                     <Breadcrumb>
                         <Breadcrumb.Item>Proposal Form</Breadcrumb.Item>
                         <Breadcrumb.Item>Idea</Breadcrumb.Item>
@@ -22,7 +22,7 @@ const Index = () => {
                     <div>Introduce a problem statement, and how your proposed idea will solve it. We will cross check it with our database of past projects and link you to any similar projects.</div>
                 </ProCard>
             </ProCard>
-            <ProCard style={{ height: 600 }}>
+            <ProCard style={{ height: '100%' }}>
                 <Form 
                     name="New Proposal"
                     labelCol={{ span: 6 }}
