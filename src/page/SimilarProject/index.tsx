@@ -19,7 +19,7 @@ const Index: React.FC = () => {
         navigate('/new_proposal');
         }
     ;
-    const body = (
+    return (
         <div>
             <ProCard direction="column" ghost gutter={[0, 16]}>
                 <ProCard style={{ height: 'wrap_content', marginBottom: 20}}>
@@ -53,9 +53,6 @@ const Index: React.FC = () => {
                 </ProCard>
             </ProCard>
         </div>
-    );
-    return (
-        <Layout body={body} />
     )
 };
 

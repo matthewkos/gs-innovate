@@ -4,7 +4,7 @@ import {ProCard, ProFormRadio} from "@ant-design/pro-components";
 import {Breadcrumb, Button, Checkbox, Form, Radio, Row, Select, Space} from "antd";
 
 const MoreDetails: React.FC = () => {
-    const body = (
+    return (
         <div>
             <ProCard direction="column" ghost gutter={[0, 16]}>
                 <ProCard style={{ height: 150 }}>
@@ -24,9 +24,9 @@ const MoreDetails: React.FC = () => {
                         name="New Proposal Details"
                         labelCol={{ span: 6 }}
                         wrapperCol={{ span: 16 }}
-                        initialValues={{ remember: true }}>  
+                        initialValues={{ remember: true }}>
                         <Form.Item
-                            name="existing" 
+                            name="existing"
                             label="Does this idea exist?"
                             rules={[{ required: true, message: 'Please input your idea!' }]}
                             style={{paddingBottom:10}}
@@ -47,14 +47,14 @@ const MoreDetails: React.FC = () => {
                             />
                         </Form.Item>
                         <Form.Item
-                            name="members" 
+                            name="members"
                             label="Team Members"
                             style={{paddingBottom:10}}
                         >
                             <Select placeholder="Find team members..."></Select>
                         </Form.Item>
                         <Form.Item
-                            name="reviewers" 
+                            name="reviewers"
                             label="Reviewers (optional)"
                             style={{paddingBottom:10}}
                         >
@@ -69,7 +69,6 @@ const MoreDetails: React.FC = () => {
             </ProCard>
         </div>
     );
-    return <Layout body={body} />;
 };
 
 export default MoreDetails;

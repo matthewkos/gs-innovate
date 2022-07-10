@@ -1,11 +1,11 @@
 import * as React from 'react';
-import Layout from "../Layout";
 import {ProCard} from "@ant-design/pro-components";
 import {Breadcrumb, Space, Table, Tag} from "antd";
 import SearchBar from "../../components/SearchBar";
 import {mapHashTagsListToHasTags} from "../../Utils/utils";
 import {ColumnsType} from "antd/lib/table/interface";
 import AvatarGroup from "../../components/Avatar";
+import {Outlet, useNavigate} from "react-router-dom";
 
 type RecordType = {
     type: string[],
@@ -95,6 +95,7 @@ const columns: ColumnsType<RecordType> = [
 ];
 
 const MyProjects: React.FC = () => {
+    const navigate = useNavigate();
     const hashTagsList: string[] = ['All', 'Drafts', 'Submitted', 'Rejected', 'Implemented']
     const body = (
       <div>
@@ -114,13 +115,22 @@ const MyProjects: React.FC = () => {
           </ProCard>
           <div>&nbsp;</div>
           <ProCard>
-              <Table dataSource={dataSource} columns={columns}/>
+              <Table
+                  dataSource={dataSource}
+                  columns={columns}
+                  onRow={(record, rowIndex) => {
+                      return {
+                          onClick: event => navigate('/details')
+                      }
+                  }}
+              />
           </ProCard>
       </div>
     );
     return (
-        <Layout body={body} />
+        body
     )
 };
+
 
 export default MyProjects;

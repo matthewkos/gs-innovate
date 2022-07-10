@@ -10,7 +10,7 @@ const Index = () => {
     const onClick = () => {
       navigate('/new_proposal');
     };
-    const body = (
+    return (
         <div style={{height: '100%'}}>
             <ProCard direction="column" ghost gutter={[0, 16]} style={{marginBottom:30}}>
                 <ProCard style={{ height: 'wrap_content' }}>
@@ -23,7 +23,7 @@ const Index = () => {
                 </ProCard>
             </ProCard>
             <ProCard style={{ height: '100%' }}>
-                <Form 
+                <Form
                     name="New Proposal"
                     labelCol={{ span: 6 }}
                     wrapperCol={{ span: 16 }}
@@ -37,25 +37,25 @@ const Index = () => {
                     >
                         <Input placeholder='Give your project a name.'/>
                     </Form.Item>
-                    <Form.Item 
-                        name="problem" 
+                    <Form.Item
+                        name="problem"
                         label="Problem Statement"
                         rules={[{ required: true, message: 'Please input a problem!' }]}
                         style={{paddingBottom:10}}
                     >
-                        <TextArea 
-                            placeholder='What problem are you trying to solve?' 
+                        <TextArea
+                            placeholder='What problem are you trying to solve?'
                             showCount maxLength={2000}
                             style={{height:100}}/>
                     </Form.Item>
-                    <Form.Item 
-                        name="solution" 
+                    <Form.Item
+                        name="solution"
                         label="Proposed Solution"
                         rules={[{ required: true, message: 'Please input your idea!' }]}
                         style={{paddingBottom:10}}
                     >
-                        <TextArea 
-                            placeholder='How does your proposed idea solve this problem?' 
+                        <TextArea
+                            placeholder='How does your proposed idea solve this problem?'
                             showCount maxLength={4000}
                             style={{height:150}}/>
                     </Form.Item>
@@ -64,15 +64,12 @@ const Index = () => {
                             Save & Exit
                         </Button>
                         <Button type="primary" htmlType="submit" onClick={onClick}>
-                            Continue    
+                            Continue
                         </Button>
                     </div>
                 </Form>
             </ProCard>
         </div>
-    );
-    return (
-        <Layout body={body} />
     )
 };
 

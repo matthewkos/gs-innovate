@@ -44,7 +44,7 @@ const NewProposal: React.FC = () => {
     const onClickContinue = () => {
         navigate('/proposal/moredetail')
     }
-    const body = (
+    return (
         <div>
             <ProCard direction="column" ghost gutter={[0, 16]} style={{marginBottom:20}}>
                 <ProCard style={{ height: 150 }}>
@@ -58,39 +58,38 @@ const NewProposal: React.FC = () => {
                     <div>Projects in our database that are similar to yours</div>
                 </ProCard>
             </ProCard>
-                <div className="site-card-wrapper">
-                    <Row gutter={16} style={{height: 'wrapContent'}}>
-                        <Col span={8}>
-                            <ProjectCardDisplay
-                                imageSrc="https://user-images.githubusercontent.com/8186664/44953195-581e3d80-aec4-11e8-8dcb-54b9db38ec11.png"
-                                projectTitle="Centralised documentation platform"
-                                projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
-                                projectStatus="Rejected"
-                                onClick={onClick} />
-                        </Col>
-                        <Col span={8}>
-                            <ProjectCardDisplay
-                                imageSrc="https://user-images.githubusercontent.com/8186664/44953195-581e3d80-aec4-11e8-8dcb-54b9db38ec11.png"
-                                projectTitle="Centralised documentation platform"
-                                projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
-                                projectStatus="Implemented" />
-                        </Col>
-                        <Col span={8}>
-                            <ProjectCardDisplay
-                                imageSrc="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                                projectTitle="Centralised documentation platform"
-                                projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
-                                projectStatus="Rejected" />
-                        </Col>
-                    </Row>
-                    <div style={{paddingTop: 20, display: 'flex', flexDirection:'row', justifyContent:'space-between'}}>
-                        <Button onClick={onClickReturn}>Return to Form</Button>
-                        <Button style={{backgroundColor: '#1890FF', color:'white'}} onClick={onClickContinue}>Continue</Button>
-                    </div>
+            <div className="site-card-wrapper">
+                <Row gutter={16} style={{height: 'wrapContent'}}>
+                    <Col span={8}>
+                        <ProjectCardDisplay
+                            imageSrc="https://user-images.githubusercontent.com/8186664/44953195-581e3d80-aec4-11e8-8dcb-54b9db38ec11.png"
+                            projectTitle="Centralised documentation platform"
+                            projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
+                            projectStatus="Rejected"
+                            onClick={onClick} />
+                    </Col>
+                    <Col span={8}>
+                        <ProjectCardDisplay
+                            imageSrc="https://user-images.githubusercontent.com/8186664/44953195-581e3d80-aec4-11e8-8dcb-54b9db38ec11.png"
+                            projectTitle="Centralised documentation platform"
+                            projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
+                            projectStatus="Implemented" />
+                    </Col>
+                    <Col span={8}>
+                        <ProjectCardDisplay
+                            imageSrc="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+                            projectTitle="Centralised documentation platform"
+                            projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
+                            projectStatus="Rejected" />
+                    </Col>
+                </Row>
+                <div style={{paddingTop: 20, display: 'flex', flexDirection:'row', justifyContent:'space-between'}}>
+                    <Button onClick={onClickReturn}>Return to Form</Button>
+                    <Button style={{backgroundColor: '#1890FF', color:'white'}} onClick={onClickContinue}>Continue</Button>
                 </div>
+            </div>
         </div>
-    );
-    return <Layout body={body} />;
+    )
 };  
 
 export default NewProposal

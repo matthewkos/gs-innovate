@@ -12,6 +12,8 @@ import SimilarProject from "./page/SimilarProject";
 import MoreDetails from "./page/MoreDetails";
 import PastProjects from "./page/PastProjects";
 import MyProjects from "./page/MyProjects";
+import MyProjectDetails from "./page/MyProjectDetails";
+import 'antd/dist/antd.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -20,16 +22,20 @@ root.render(
   <React.StrictMode>
       <BrowserRouter>
           <Routes>
-              <Route path="/ideahub" element={<MainPage />} />
-              <Route path="/proposal" element={<Proposal />}>
-                  {/*<Route path="similarproject" element={<SimilarProject />} />*/}
+              {/*<Route path="/" element={<App />} />*/}
+              <Route path="/" element={<Layout />}>
+                  <Route path="myprojects" element={<MyProjects />} />
+                  <Route path="details" element={<MyProjectDetails />} />
+
+                  <Route path="ideahub" element={<MainPage />} />
+
+                  <Route path="proposal" element={<Proposal />} />
+                  <Route path="proposal/similarproject" element={<SimilarProject />} />
+                  <Route path="new_proposal" element={<NewProposal/>} />
+                  <Route path="proposal/moredetail" element={<MoreDetails />} />
+
+                  <Route path="pastprojects" element={<PastProjects />} />
               </Route>
-              <Route path="/proposal/similarproject" element={<SimilarProject />} />
-              <Route path="/" element={<App />} />
-              <Route path="/new_proposal" element={<NewProposal/>} />
-              <Route path="/proposal/moredetail" element={<MoreDetails />} />
-              <Route path="/pastprojects" element={<PastProjects />} />
-              <Route path="/myprojects" element={<MyProjects />} />
           </Routes>
       </BrowserRouter>
   </React.StrictMode>
