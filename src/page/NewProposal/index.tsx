@@ -7,6 +7,7 @@ import Meta from 'antd/lib/card/Meta';
 import AvatarGroup from '../../components/Avatar';
 import Layout from "../Layout";
 import {useNavigate} from "react-router-dom";
+import ProjectCardDisplay from "../../components/ProjectCardDisplay";
 
 const defaultProps = {
     routes : [
@@ -60,41 +61,25 @@ const NewProposal: React.FC = () => {
                 <div className="site-card-wrapper">
                     <Row gutter={16} style={{height: 'wrapContent'}}>
                         <Col span={8}>
-                            <Card
-                            onClick={onClick}
-                            hoverable
-                            cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" height="200"/>}
-                            >
-                                <Meta title="Centralised documentation platform" description="Vel enim pulvinar massa pharetra, ultricies sed." />
-                                <div style={{paddingTop: 30, display: 'flex', flexDirection:'row', justifyContent:'space-between'}}>
-                                    <div style={{color:'rgba(255, 2, 2, 0.45)', display:'flex', flexDirection:'column', justifyContent:'center'}}>Rejected</div>
-                                    <AvatarGroup/>
-                                </div>
-                            </Card>
+                            <ProjectCardDisplay
+                                imageSrc="https://user-images.githubusercontent.com/8186664/44953195-581e3d80-aec4-11e8-8dcb-54b9db38ec11.png"
+                                projectTitle="Centralised documentation platform"
+                                projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
+                                projectStatus="Rejected" />
                         </Col>
                         <Col span={8}>
-                            <Card
-                                hoverable
-                                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" height="200"/>}
-                                >
-                                <Meta title="Centralised documentation platform" description="Vel enim pulvinar massa pharetra, ultricies sed." />
-                                <div style={{paddingTop: 30, display: 'flex', flexDirection:'row', justifyContent:'space-between'}}>
-                                    <div style={{color:'rgba(4, 190, 0, 0.45)', display:'flex', flexDirection:'column', justifyContent:'center'}}>Implemented</div>
-                                    <AvatarGroup/>
-                                </div>
-                            </Card>
+                            <ProjectCardDisplay
+                                imageSrc="https://user-images.githubusercontent.com/8186664/44953195-581e3d80-aec4-11e8-8dcb-54b9db38ec11.png"
+                                projectTitle="Centralised documentation platform"
+                                projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
+                                projectStatus="Implemented" />
                         </Col>
                         <Col span={8}>
-                            <Card
-                                hoverable
-                                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" height="200"/>}
-                                >
-                                <Meta title="Centralised documentation platform" description="Vel enim pulvinar massa pharetra, ultricies sed." />
-                                <div style={{paddingTop: 30, display: 'flex', flexDirection:'row', justifyContent:'space-between'}}>
-                                    <div style={{color:'rgba(255, 2, 2, 0.45)', display:'flex', flexDirection:'column', justifyContent:'center'}}>Rejected</div>
-                                    <AvatarGroup/>
-                                </div>
-                            </Card>
+                            <ProjectCardDisplay
+                                imageSrc="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+                                projectTitle="Centralised documentation platform"
+                                projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
+                                projectStatus="Rejected" />
                         </Col>
                     </Row>
                     <div style={{paddingTop: 20, display: 'flex', flexDirection:'row', justifyContent:'space-between'}}>

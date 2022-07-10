@@ -71,6 +71,7 @@ const ForumPost = (image: string,
     );
 }
 
+const TrendingTopicsList = ['#regeng', '#userexperience', '#sdlc', '']
 
 const MainPage: React.FC = () => {
     const [ pathname , setPathname ] = useState ( '/welcome' ) ;

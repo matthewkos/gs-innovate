@@ -26,7 +26,7 @@ const defaultProps = {
             component : './Welcome' ,
         } ,
         {
-            path : '/admin/sub-page3' ,
+            path : '/pastprojects' ,
             name : 'Past Projects' ,
             icon : <ProfileOutlined />,
             component : './Welcome' ,
@@ -34,7 +34,7 @@ const defaultProps = {
         {
             path : '/admin/sub-page' ,
             name : 'My Projects' ,
-            icon : <ProfileOutlined />,
+            icon : <UserOutlined />,
             component : './Welcome' ,
         } ,
     ] ,
@@ -68,14 +68,14 @@ const Layout: React.FC<Props> = (props) => {
                     </a>
                 )}
                 rightContentRender = { ( ) => (
-                    < div >
-                        < Avatar shape = "square" size = "small" icon = { < UserOutlined /> } />
+                    <div>
+                        <Avatar shape = "square" size = "small" icon = { < UserOutlined /> }/>
                         <p>Hello</p>
-                    </ div >
+                    </div>
                 ) }
             >
                 <PageContainer
-                    tags={<Tag color="blue">状态一</Tag>}
+                    tags={<Tag icon={<ProfileOutlined />} color="blue">状态一</Tag>}
                     header={{
                         style: {
                             // backgroundColor: '#001529',

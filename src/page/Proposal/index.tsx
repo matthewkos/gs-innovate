@@ -1,12 +1,9 @@
 import * as React from 'react';
 import Layout from '../Layout';
-import {PageContainer, ProCard, ProForm, ProFormGroup, ProFormText} from "@ant-design/pro-components";
+import {ProCard} from "@ant-design/pro-components";
 import {Breadcrumb, Button, Form, Input, PageHeader, Tabs} from "antd";
 import TextArea from "antd/lib/input/TextArea";
 import {useNavigate} from "react-router-dom";
-
-
-const { TabPane } = Tabs;
 
 const Index = () => {
     const navigate = useNavigate();
