@@ -45,7 +45,7 @@ const NewProposal: React.FC = () => {
     }
     const body = (
         <div>
-            <ProCard direction="column" ghost gutter={[0, 16]}>
+            <ProCard direction="column" ghost gutter={[0, 16]} style={{marginBottom:20}}>
                 <ProCard style={{ height: 150 }}>
                     <Breadcrumb>
                         <Breadcrumb.Item>Proposal Form</Breadcrumb.Item>
@@ -54,14 +54,11 @@ const NewProposal: React.FC = () => {
                         <Breadcrumb.Item>Project Information</Breadcrumb.Item>
                     </Breadcrumb>
                     <h1>Improved Search Engine for GS Firmwide Search</h1>
-                    <div>SME Review Failed</div>
+                    <div>Projects in our database that are similar to yours</div>
                 </ProCard>
             </ProCard>
-            <div>
-                Similar Project
-            </div>
                 <div className="site-card-wrapper">
-                    <Row gutter={16} style={{height: 600}}>
+                    <Row gutter={16} style={{height: 'wrapContent'}}>
                         <Col span={8}>
                             <Card
                             onClick={onClick}
