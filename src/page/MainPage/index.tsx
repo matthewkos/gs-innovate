@@ -82,10 +82,10 @@ const MainPage: React.FC = () => {
                             </div>
                         </ProCard>
                         <ProCard style={{ height: 600 }} split='horizontal'>
-                            {ForumPost('https://joeschmoe.io/api/v1/josephine', 'Centralised Documentation Platform', 'Justina Wong is very nice', 2, 1, 69,true)}
-                            {ForumPost('https://joeschmoe.io/api/v1/joe', 'Centralised Documentation Platform', 'Justina Wong is a very helpful', 2, 1, 69,false)}
-                            {ForumPost('https://joeschmoe.io/api/v1/jack', 'Centralised Documentation Platform', 'Justina Wong is not a bully', 2, 1, 69,true)}
-                            {ForumPost('https://joeschmoe.io/api/v1/jill', 'Centralised Documentation Platform', 'Justina Wong is a very helpful', 2, 1, 69,false)}
+                            {ForumPost('https://joeschmoe.io/api/v1/josephine', 'Centralised Documentation Platform', 'GS onboarding platform to help make the onboarding of interns and NAPA easier', 50, 8, 5,true)}
+                            {ForumPost('https://joeschmoe.io/api/v1/joe', 'Food Delivery App', 'Simple Food Delivery app that aggregates all the food places avalable', 46, 6, 10,false)}
+                            {ForumPost('https://joeschmoe.io/api/v1/jack', 'New Chatting Platform', 'An integrated chatting platform that combines all the different messaging services available and is persistent', 29, 2, 14,true)}
+                            {ForumPost('https://joeschmoe.io/api/v1/jill', 'Search Engine', 'Combined search engine to search anything within GS easily without having to resort to going to different platform', 15, 5, 2,false)}
                         </ProCard>
                     </ProCard>
                     <ProCard gutter={[8, 8]} ghost wrap split='horizontal'>
