@@ -5,7 +5,7 @@ import SearchBar from "../../components/SearchBar";
 import {mapHashTagsListToHasTags} from "../../Utils/utils";
 import {ColumnsType} from "antd/lib/table/interface";
 import AvatarGroup from "../../components/Avatar";
-import {Outlet, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 type RecordType = {
     type: string[],

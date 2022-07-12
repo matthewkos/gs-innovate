@@ -76,42 +76,43 @@ const PastProjects: React.FC = () => {
                                 imageSrc="https://user-images.githubusercontent.com/8186664/44953195-581e3d80-aec4-11e8-8dcb-54b9db38ec11.png"
                                 projectTitle="Centralised documentation platform"
                                 projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
-                                projectStatus="Rejected" />
+                                projectStatus="Rejected"
+                            />
                         </Col>
                         <Col span={8}>
                             <ProjectCardDisplay
-                                imageSrc="https://user-images.githubusercontent.com/8186664/44953195-581e3d80-aec4-11e8-8dcb-54b9db38ec11.png"
+                                imageSrc="https://raw.githubusercontent.com/bichenkk/react-starter/master/github/screenshot.png"
                                 projectTitle="Centralised documentation platform"
                                 projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
                                 projectStatus="Implemented" />
                         </Col>
                         <Col span={8}>
                             <ProjectCardDisplay
-                                imageSrc="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+                                imageSrc="https://gw.alipayobjects.com/zos/antfincdn/P31ZGMwzGe/d5365860-f7c6-4abe-98c0-36d6b1b3a65a.png"
                                 projectTitle="Centralised documentation platform"
                                 projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
                                 projectStatus="Rejected" />
                         </Col>
                         <Col span={8}>
                             <ProjectCardDisplay
-                                imageSrc="https://user-images.githubusercontent.com/8186664/44953195-581e3d80-aec4-11e8-8dcb-54b9db38ec11.png"
+                                imageSrc="https://miro.medium.com/max/1400/1*wR795-5eki5Wo2O2Q02J5w.png"
+                                projectTitle="Centralised documentation platform"
+                                projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
+                                projectStatus="Submitted" />
+                        </Col>
+                        <Col span={8}>
+                            <ProjectCardDisplay
+                                imageSrc="https://repository-images.githubusercontent.com/34526884/8e0a5095-5d82-425c-a54f-a0cb51743a12"
                                 projectTitle="Centralised documentation platform"
                                 projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
                                 projectStatus="Rejected" />
                         </Col>
                         <Col span={8}>
                             <ProjectCardDisplay
-                                imageSrc="https://user-images.githubusercontent.com/8186664/44953195-581e3d80-aec4-11e8-8dcb-54b9db38ec11.png"
+                                imageSrc="https://sptechnet.files.wordpress.com/2020/07/ant-table.png?w=1024"
                                 projectTitle="Centralised documentation platform"
                                 projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
-                                projectStatus="Rejected" />
-                        </Col>
-                        <Col span={8}>
-                            <ProjectCardDisplay
-                                imageSrc="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                                projectTitle="Centralised documentation platform"
-                                projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
-                                projectStatus="Rejected" />
+                                projectStatus="Submitted" />
                         </Col>
                     </Row>
                 </div>

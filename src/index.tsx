@@ -27,6 +27,8 @@ root.render(
                   <Route path="myprojects" element={<MyProjects />} />
                   <Route path="details" element={<MyProjectDetails />} />
 
+
+                  <Route index element={<MainPage />} />
                   <Route path="ideahub" element={<MainPage />} />
 
                   <Route path="proposal" element={<Proposal />} />

@@ -65,7 +65,7 @@ const Layout: React.FC = () => {
             ) }
         >
             <PageContainer
-                tags={<Tag icon={<ProfileOutlined />} color="blue">状态一</Tag>}
+                tags={<Tag icon={<ProfileOutlined />} color="blue">GS Innovate</Tag>}
                 header={{
                     style: {
                         // backgroundColor: '#001529',
