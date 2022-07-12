@@ -71,7 +71,7 @@ export const ReviewerCard = (image: string,
         <ProCard colSpan='100%' bordered={bordered}>
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', marginBottom: 10,}}>
                 <div style={{minWidth: 32, minHeight: 32, aspectRatio: 'auto'}}>
-                    <Avatar></Avatar>
+                    <Avatar src={image}></Avatar>
                 </div>
                 <div>
                     <div style={{overflow: "hidden",marginLeft: 16, fontSize: '1.25em', fontWeight: "bold"}}>
@@ -118,9 +118,9 @@ const MyProjectDetails: React.FC = () => {
                 </Table>
             </ProCard>
               <ProCard colSpan='20%' title='Reviewers' headerBordered split='horizontal' style={{height: '100%'}}>
-                  {ReviewerCard('1', 'Lim, Jeremy', 'Regulatory Engineering',true)}
-                  {ReviewerCard('1', 'Koo, Tin Lok', 'DSML QF',true)}
-                  {ReviewerCard('1', 'Wong, Justina', 'Slang SDLC',true)}
+                  {ReviewerCard('https://joeschmoe.io/api/v1/jon', 'Lim, Jeremy', 'Regulatory Engineering',true)}
+                  {ReviewerCard('https://joeschmoe.io/api/v1/jack', 'Koo, Tin Lok', 'DSML QF',true)}
+                  {ReviewerCard('https://joeschmoe.io/api/v1/jess', 'Wong, Justina', 'Slang SDLC',true)}
               </ProCard>
           </ProCard>
       </div>

@@ -36,23 +36,23 @@ const NewProposal: React.FC = () => {
                     <Col span={8}>
                         <ProjectCardDisplay
                             imageSrc="https://user-images.githubusercontent.com/8186664/44953195-581e3d80-aec4-11e8-8dcb-54b9db38ec11.png"
-                            projectTitle="Centralised documentation platform"
+                            projectTitle="Improved Search Engine for GS Firmwide Search"
                             projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
                             projectStatus="Rejected"
                             onClick={onClick} />
                     </Col>
                     <Col span={8}>
                         <ProjectCardDisplay
-                            imageSrc="https://user-images.githubusercontent.com/8186664/44953195-581e3d80-aec4-11e8-8dcb-54b9db38ec11.png"
-                            projectTitle="Centralised documentation platform"
-                            projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
+                            imageSrc="https://sptechnet.files.wordpress.com/2020/07/ant-table.png?w=1024"
+                            projectTitle="Alternate FrontEnd Component Library"
+                            projectDescription="An alternative to GS UI Toolkit and allows for more customisation."
                             projectStatus="Implemented" />
                     </Col>
                     <Col span={8}>
                         <ProjectCardDisplay
-                            imageSrc="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                            projectTitle="Centralised documentation platform"
-                            projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
+                            imageSrc="https://miro.medium.com/max/1400/1*wR795-5eki5Wo2O2Q02J5w.png"
+                            projectTitle="Groupbuy Food App"
+                            projectDescription="A GrabFood like application that allows GS user to easily place order for food. Aggregates the available stores from different application such as GrabFood, FoodPanda and Deliveryroo"
                             projectStatus="Rejected" />
                     </Col>
                 </Row>

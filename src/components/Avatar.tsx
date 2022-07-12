@@ -7,11 +7,13 @@ const AvatarGroup: React.FC = () => (
         <Tooltip title="Lim, Jeremy" placement="top">
             <Avatar src="https://joeschmoe.io/api/v1/jon" />
         </Tooltip>
-        <Avatar style={{ backgroundColor: '#f56a00' }}>J</Avatar>
+        <Avatar style={{ backgroundColor: '#f56a00' }} src="https://joeschmoe.io/api/v1/josephine">J</Avatar>
         <Tooltip title="Wong, Justina" placement="top">
             <Avatar style={{ backgroundColor: '#87d068' }} src="https://joeschmoe.io/api/v1/jess" />
         </Tooltip>
-        <Avatar style={{ backgroundColor: '#1890ff' }} src="https://joeschmoe.io/api/v1/jack" />
+        <Tooltip title="Koo, Tin Lok" placement="top">
+            <Avatar style={{ backgroundColor: '#1890ff' }} src="https://joeschmoe.io/api/v1/jack" />
+        </Tooltip>
     </Avatar.Group>
 )
 

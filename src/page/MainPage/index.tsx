@@ -16,7 +16,7 @@ export const ForumPost = (image: string,
         <ProCard colSpan='100%' bordered={bordered}>
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', marginBottom: 10,}}>
                 <div style={{minWidth: 32, minHeight: 32, aspectRatio: 'auto'}}>
-                    <Avatar></Avatar>
+                    <Avatar src={image}></Avatar>
                 </div>
                 <div style={{overflow: "hidden",marginLeft: 16, fontSize: '1.25em', fontWeight: "bold"}}>
                     {title}
@@ -82,10 +82,10 @@ const MainPage: React.FC = () => {
                             </div>
                         </ProCard>
                         <ProCard style={{ height: 600 }} split='horizontal'>
-                            {ForumPost('1', 'Centralised Documentation Platform', 'Justina Wong is very nice', 2, 1, 69,true)}
-                            {ForumPost('1', 'Centralised Documentation Platform', 'Justina Wong is a very helpful', 2, 1, 69,false)}
-                            {ForumPost('1', 'Centralised Documentation Platform', 'Justina Wong is not a bully', 2, 1, 69,true)}
-                            {ForumPost('1', 'Centralised Documentation Platform', 'Justina Wong is a very helpful', 2, 1, 69,false)}
+                            {ForumPost('https://joeschmoe.io/api/v1/josephine', 'Centralised Documentation Platform', 'Justina Wong is very nice', 2, 1, 69,true)}
+                            {ForumPost('https://joeschmoe.io/api/v1/joe', 'Centralised Documentation Platform', 'Justina Wong is a very helpful', 2, 1, 69,false)}
+                            {ForumPost('https://joeschmoe.io/api/v1/jack', 'Centralised Documentation Platform', 'Justina Wong is not a bully', 2, 1, 69,true)}
+                            {ForumPost('https://joeschmoe.io/api/v1/jill', 'Centralised Documentation Platform', 'Justina Wong is a very helpful', 2, 1, 69,false)}
                         </ProCard>
                     </ProCard>
                     <ProCard gutter={[8, 8]} ghost wrap split='horizontal'>

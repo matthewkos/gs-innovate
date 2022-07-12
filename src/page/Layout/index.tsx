@@ -89,7 +89,7 @@ const Layout: React.FC = () => {
                                 <Button key="6" icon={<BellOutlined />} type='text'></Button>
                                 </Badge>
                             </span>,
-                    <Avatar src="https://joeschmoe.io/api/v1/random"/>,
+                    <Avatar src="https://joeschmoe.io/api/v1/josephine"/>,
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent:'center', alignContent: 'center'}}>
                         Wong, Justina
                     </div>

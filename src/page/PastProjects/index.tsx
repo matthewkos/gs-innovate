@@ -75,43 +75,43 @@ const PastProjects: React.FC = () => {
                             <ProjectCardDisplay
                                 imageSrc="https://user-images.githubusercontent.com/8186664/44953195-581e3d80-aec4-11e8-8dcb-54b9db38ec11.png"
                                 projectTitle="Centralised documentation platform"
-                                projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
+                                projectDescription="A centralised documentation platform that users can easily search for documentations with ease. Akin to having a google search bar."
                                 projectStatus="Rejected"
                             />
                         </Col>
                         <Col span={8}>
                             <ProjectCardDisplay
                                 imageSrc="https://raw.githubusercontent.com/bichenkk/react-starter/master/github/screenshot.png"
-                                projectTitle="Centralised documentation platform"
-                                projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
+                                projectTitle="Centralised Admin Portal"
+                                projectDescription="All in one portal where GS users can access to apply for leaves, claim reimbursement etc... Can also integrate allow permission access request here"
                                 projectStatus="Implemented" />
                         </Col>
                         <Col span={8}>
                             <ProjectCardDisplay
                                 imageSrc="https://gw.alipayobjects.com/zos/antfincdn/P31ZGMwzGe/d5365860-f7c6-4abe-98c0-36d6b1b3a65a.png"
-                                projectTitle="Centralised documentation platform"
-                                projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
+                                projectTitle="Big Data Platform"
+                                projectDescription="A dashboard that aggregates data and visualise them. Allows customisation and integrates easily with other platform such as Grafana"
                                 projectStatus="Rejected" />
                         </Col>
                         <Col span={8}>
                             <ProjectCardDisplay
-                                imageSrc="https://miro.medium.com/max/1400/1*wR795-5eki5Wo2O2Q02J5w.png"
-                                projectTitle="Centralised documentation platform"
-                                projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
+                                imageSrc="https://repository-images.githubusercontent.com/34526884/8e0a5095-5d82-425c-a54f-a0cb51743a12"
+                                projectTitle="Community Service Registration Portal"
+                                projectDescription="Centralised platform for all the available community service that GS is holding. Allows GS users to easily start doing Community Services and also find friends to tag along."
                                 projectStatus="Submitted" />
                         </Col>
                         <Col span={8}>
                             <ProjectCardDisplay
-                                imageSrc="https://repository-images.githubusercontent.com/34526884/8e0a5095-5d82-425c-a54f-a0cb51743a12"
-                                projectTitle="Centralised documentation platform"
-                                projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
+                                imageSrc="https://miro.medium.com/max/1400/1*wR795-5eki5Wo2O2Q02J5w.png"
+                                projectTitle="Groupbuy Food App"
+                                projectDescription="A GrabFood like application that allows GS user to easily place order for food. Aggregates the available stores from different application such as GrabFood, FoodPanda and Deliveryroo"
                                 projectStatus="Rejected" />
                         </Col>
                         <Col span={8}>
                             <ProjectCardDisplay
                                 imageSrc="https://sptechnet.files.wordpress.com/2020/07/ant-table.png?w=1024"
-                                projectTitle="Centralised documentation platform"
-                                projectDescription="Vel enim pulvinar massa pharetra, ultricies sed."
+                                projectTitle="Alternate FrontEnd Component Library"
+                                projectDescription="An alternative to GS UI Toolkit and allows for more customisation."
                                 projectStatus="Submitted" />
                         </Col>
                     </Row>
